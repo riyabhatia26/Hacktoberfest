@@ -1,0 +1,36 @@
+package com.company;
+
+public class StaticDemo1 {
+    StaticDemo1()
+    {
+        System.out.println("Constructor");
+    }
+    static
+    {
+        System.out.println("Static block1");
+    }
+    static void method()
+        {
+            System.out.println("static method");
+        }
+        static
+        {
+            method();
+            System.out.println("Static block2");
+        }
+        void instanceMethod()
+    {
+        System.out.println("Instance Method");
+    }
+    {
+        System.out.println("Class level blocks");
+    }
+    public static void main(String[]args)
+    {
+        System.out.println("Main Method");
+        StaticDemo1 ob = new StaticDemo1();
+        ob.instanceMethod();
+    }
+
+
+}
